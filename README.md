@@ -1,4 +1,4 @@
-![stack Overflow](https://cdn.iconscout.com/icon/free/png-256/angular-3-226070.png)![stack Overflow](https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/225/square_256/webpack_logo.png)![stack Overflow](https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/940/square_256/jestlogo.png)
+![stack Overflow](src/assets/images/angular.png)![stack Overflow](src/assets/images/jest.png)![stack Overflow](src/assets/images/webpack.png)
 
 # Angular-Webpack-Base
 
