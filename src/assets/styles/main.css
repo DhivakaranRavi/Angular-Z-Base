@@ -1,0 +1,32 @@
+* {
+  font-family: 'Thasadith', sans-serif;
+}
+.image-base {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-base {
+  margin: 20px;
+  min-height: 250px;
+  width: 56%;
+  cursor: pointer;
+}
+
+.card-base h1 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-base {
+    width: 100%;
+  }
+  .image-base img {
+    height: 83px;
+  }
+}
