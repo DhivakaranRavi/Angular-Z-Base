@@ -7,11 +7,10 @@ const {
 const {
   SuppressExtractedTextChunksWebpackPlugin,
 } = require('@angular-devkit/build-angular/src/angular-cli-files/plugins/suppress-entry-chunks-webpack-plugin');
-const { HashedModuleIdsPlugin } = require('webpack');
-const BrotliPlugin = require('brotli-webpack-plugin');
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
-
+const { HashedModuleIdsPlugin } = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
 module.exports = merge(common, {
   mode: 'production',
   devtool: '',
@@ -33,11 +32,18 @@ module.exports = merge(common, {
     noEmitOnErrors: true,
     runtimeChunk: 'single',
     splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
       cacheGroups: {
-        common: {
+        vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+          name(module) {
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
+            )[1];
+            return `npm.${packageName.replace('@', '')}`;
+          },
         },
       },
     },
@@ -70,11 +76,12 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].css' }),
     new SuppressExtractedTextChunksWebpackPlugin(),
-    new BrotliPlugin({
-      asset: '[path].br[query]',
-      test: /\.(js|css|html|svg)$/,
+    new CompressionPlugin({
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
-      minRatio: 0.8,
+      minRatio: 0.7,
     }),
   ],
 });

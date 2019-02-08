@@ -11,14 +11,22 @@ git clone  https://github.com/DhivakaranRavi/Angular-Base.git
 ### Prerequisites
 
 ```
-Npm -V3.5.2
-Node -V8.10.0
+Npm -V^3.5.2
+Node -V^8.10.0
 ```
 
 ### Installing
 
 ```
 npm install
+```
+
+## Testing
+
+```
+npm test
+npm run test:watch
+npm run test:coverage
 ```
 
 ## Deployment
@@ -37,10 +45,14 @@ npm run build
 
 [Prettier](https://prettier.io/) - Prettier is an opinionated code formatter for modern JavaScript applications
 
+### Test With
+
+[Jest](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+
 ## Built With
 
 [Webpack](https://webpack.js.org/concepts/) - webpack is a static module bundler for modern JavaScript applications
 
 ## Author
 
-**Dhivakaran Ravi**
+**Dhivakaran Ravi** -Full Stack Developer(Js)
