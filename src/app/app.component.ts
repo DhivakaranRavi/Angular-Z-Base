@@ -19,7 +19,7 @@ import {
     trigger('fly', [
       state(':in', style({ transform: 'translateX(0)' })),
       transition(':enter', [
-        style({ transform: 'translateX(-100%)' }),
+        style({ transform: 'translateY(-100%)' }),
         animate('0.7s  ease-in'),
       ]),
     ]),
