@@ -5,4 +5,4 @@ set +x
 
 echo 'Runing Jest Testing...'
 set -x
-npm test 
+sudo npm test --unsafe-perm=true --allow-root

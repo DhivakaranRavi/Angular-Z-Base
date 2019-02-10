@@ -1,11 +1,11 @@
 
 echo 'Build starts...'
 set -x
-npm run build
+sudo npm run build --unsafe-perm=true --allow-root
 set +x
 
 set -x
-npm start &
+sudo npm start --unsafe-perm=true --allow-root  &
 sleep 1
 echo $! > .pidfile
 set +x
