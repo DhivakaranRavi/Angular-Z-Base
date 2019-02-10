@@ -1,6 +1,6 @@
 ![stack Overflow](src/assets/images/angular.png)![stack Overflow](src/assets/images/jest.png)![stack Overflow](src/assets/images/webpack.png)
 
-# Angular-Webpack-Base
+# Angular-Jest-Base
 
 This project is a base for Angular Appication from scratch with webpack configuration and fully customizable setup.
 
