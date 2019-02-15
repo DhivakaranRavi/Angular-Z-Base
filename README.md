@@ -1,8 +1,8 @@
-![stack Overflow](src/assets/images/angular.png)![stack Overflow](src/assets/images/jest.png)![stack Overflow](src/assets/images/webpack.png)
+<div style="text-align:center"><img src ="src/assets/images/logo.png" /></div>
 
-# Angular-Jest-Base
+# Angular-Z-Base
 
-This project is a base for Angular Appication from scratch with webpack configuration and fully customizable setup.
+This project is a base for PWA Angular from scratch with webpack configuration and fully customizable setup.
 
 ## Getting Started
 

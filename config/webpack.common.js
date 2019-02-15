@@ -15,7 +15,7 @@ module.exports = {
     styles: './src/styles.css',
   },
   output: {
-    path: resolve('./build'),
+    path: resolve('./dist'),
     filename: '[name].[contenthash].js',
   },
   resolve: {

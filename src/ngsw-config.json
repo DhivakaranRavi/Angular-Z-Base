@@ -1,0 +1,42 @@
+{
+  "index": "/index.html",
+  "appData": {
+    "test": true
+  },
+  "assetGroups": [
+    {
+      "name": "angular-z-base",
+      "version": "1.0.0",
+      "resources": {
+        "files": ["/assets/**/*", "!/ngsw-worker.js"],
+        "versionedFiles": ["/**/*.html", "/**/*.js", "/**/*.css"],
+        "urls": [
+          "https://fonts.googleapis.com/css?family=Ropa+San",
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-freshness",
+      "urls": ["/timeline"],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "1m",
+        "strategy": "freshness"
+      }
+    },
+    {
+      "name": "api-performance",
+      "urls": ["/favorites"],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "1m",
+        "strategy": "performance"
+      }
+    }
+  ]
+}

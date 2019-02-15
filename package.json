@@ -1,11 +1,14 @@
 {
-  "name": "angular-base",
+  "name": "angular-z-base",
   "version": "1.0.0",
-  "description": "Base Setup For Angular Application",
+  "description": "A PWA Angular Base Application",
   "scripts": {
     "precommit": "lint-staged",
+    "ngsw-config": "node_modules/.bin/ngsw-config dist src/ngsw-config.json",
+    "ngsw-copy": "cp node_modules/@angular/service-worker/ngsw-worker.js dist/",
+    "manifest-copy": "cp src/manifest.json dist/",
     "start": "webpack-dev-server  --config ./config/webpack.dev.js --open",
-    "build": "webpack --config ./config/webpack.prod.js",
+    "build": "webpack --config ./config/webpack.prod.js && npm run ngsw-config && npm run ngsw-copy && npm run manifest-copy",
     "format": "prettier **/**/*.ts --ignore-path ./.prettierignore --write",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -38,8 +41,9 @@
     "@angular/platform-browser": "^7.2.1",
     "@angular/platform-browser-dynamic": "^7.2.1",
     "@angular/router": "^7.2.1",
-    "rxjs": "^6.3.3",
+    "@angular/service-worker": "^7.2.4",
     "core-js": "^2.6.3",
+    "rxjs": "^6.3.3",
     "zone.js": "^0.8.28"
   },
   "devDependencies": {

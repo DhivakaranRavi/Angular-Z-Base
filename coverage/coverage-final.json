@@ -5,7 +5,7 @@
       "statementMap": {
         "0": {
           "start": { "line": 1, "column": 0 },
-          "end": { "line": 1, "column": 489 }
+          "end": { "line": 1, "column": 431 }
         }
       },
       "fnMap": {},
@@ -14,7 +14,7 @@
       "f": {},
       "b": {},
       "_coverageSchema": "43e27e138ebf9cfc5966b082cf9a028302ed4184",
-      "hash": "055f3bf58354f554993ebcdcaa38b24a2df26410"
+      "hash": "1f2fb379ae6d25271fe191716e4b17e419126206"
     }
   },
   "/home/dhivakaran/Dhivakaran/workspace/Angular-Setup/src/app/app.component.ts": {

@@ -6,7 +6,9 @@ import { AppRoutingModule } from './app.routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
-import { SharedModule } from './shared-module/shared.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environment';
+
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
@@ -16,7 +18,9 @@ import { SharedModule } from './shared-module/shared.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule,
+    environment.production
+      ? ServiceWorkerModule.register('/ngsw-worker.js')
+      : [],
   ],
   declarations: [AppComponent],
   providers: [],
