@@ -1,14 +1,10 @@
-<p align="center"><img src ="src/assets/images/logo.png" /></p>
+<p align="center"><img src ="https://raw.githubusercontent.com/DhivakaranRavi/Angular-Z-Base/master/src/assets/images/logogit.png" alt="Angular-Z-Base" /></p>
 
 # Angular-Z-Base
 
 This project is a base for PWA Angular from scratch with webpack configuration and fully customizable setup.
 
 ## Getting Started
-
-```
-git clone  https://github.com/DhivakaranRavi/Angular-Base.git
-```
 
 ### Prerequisites
 
