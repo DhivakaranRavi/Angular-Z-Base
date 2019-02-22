@@ -18,6 +18,10 @@ module.exports = {
     path: resolve('./dist'),
     filename: '[name].[contenthash].js',
   },
+  stats: {
+    modules: false,
+    warnings: false,
+  },
   resolve: {
     extensions: ['.ts', '.js'],
     alias: rxPaths(),

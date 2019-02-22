@@ -1,11 +1,12 @@
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
-
+const { resolve } = require('path');
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval',
   devServer: {
     stats: {
+      modules: false,
       warnings: false,
     },
   },

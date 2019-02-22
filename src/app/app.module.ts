@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environment';
+import { APP_BASE_HREF } from '@angular/common';
+import { SharedModule } from './shared-module/shared.module';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -18,12 +20,13 @@ import { environment } from '../environment';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
     environment.production
       ? ServiceWorkerModule.register('/ngsw-worker.js')
       : [],
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
