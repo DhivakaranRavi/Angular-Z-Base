@@ -2,7 +2,7 @@
 
 # Angular-Z-Base
 
-This project is a base for PWA Angular from scratch with webpack configuration and fully customizable setup.
+This project is a base for Progressive Web Apps(Angular) from scratch with webpack configuration and fully customizable setup.
 
 ## Getting Started
 
@@ -34,6 +34,8 @@ npm start
 ```
 
 ## Production
+
+set the production as true in src/environment.ts
 
 ```
 npm run build

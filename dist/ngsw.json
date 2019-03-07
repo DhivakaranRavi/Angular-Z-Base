@@ -1,5 +1,6 @@
 {
   "configVersion": 1,
+  "timestamp": 1551978326988,
   "appData": {
     "test": true
   },
@@ -10,19 +11,20 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/angular-z-base.angular.4981ead7a5642e01ef60.js",
-        "/angular-z-base.core-js.3b9f2a5f8606703915f8.js",
-        "/angular-z-base.rxjs.33125ba69f02bf6111e3.js",
-        "/angular-z-base.tslib.ce845a4276df31e9e31f.js",
-        "/angular-z-base.zone.js.2ada4e10bb3e0da35c75.js",
+        "/angular-z-base.angular.e945c6ff42da91b4c109.js",
+        "/angular-z-base.core-js.1290a8ff911b790b6079.js",
+        "/angular-z-base.process.c4f1d33f560b7676d7a1.js",
+        "/angular-z-base.rxjs.a4b546606898aae85e65.js",
+        "/angular-z-base.tslib.c88392cad8b44db3ebf2.js",
+        "/angular-z-base.webpack.cb63d876de4fb61bdc3d.js",
+        "/angular-z-base.zone.js.a8c4ccea684e2900b525.js",
+        "/assets/css/main.css",
         "/assets/images/logo.png",
         "/assets/images/logogit.png",
-        "/assets/styles/main.css",
         "/index.html",
-        "/main.c36850a8145f9055fe26.js",
-        "/polyfills.28e2bd9171f9dbbe4c30.js",
-        "/runtime.f08c84963af9a5846d53.js",
-        "/styles.css"
+        "/main.92fe17e3507dd13016b8.js",
+        "/polyfills.3778740b8ab7c22b0efb.js",
+        "/runtime.41b60679bf456e67acb0.js"
       ],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/css\\?family=Ropa\\+San",
@@ -55,19 +57,20 @@
     }
   ],
   "hashTable": {
-    "/angular-z-base.angular.4981ead7a5642e01ef60.js": "b29440d46f07f840eb0d7076d2ae629069476f35",
-    "/angular-z-base.core-js.3b9f2a5f8606703915f8.js": "4f863b69d1f4e44a283b86374a15391144cb26f1",
-    "/angular-z-base.rxjs.33125ba69f02bf6111e3.js": "0ab37d008e50bd23ca0c14c83e25fd56968dd54f",
-    "/angular-z-base.tslib.ce845a4276df31e9e31f.js": "79bf5ce79cbbb5a7ccc0b12528f9bbc3cc89de7c",
-    "/angular-z-base.zone.js.2ada4e10bb3e0da35c75.js": "dd16667acaca3bb256fa63d43a9b5bf6f2b24fad",
+    "/angular-z-base.angular.e945c6ff42da91b4c109.js": "aecf110cee55e188c296e6f0faca0c9cca8c4a2f",
+    "/angular-z-base.core-js.1290a8ff911b790b6079.js": "455bd2f3c03e33695ebe9c1aa6ef1b4995d57c6e",
+    "/angular-z-base.process.c4f1d33f560b7676d7a1.js": "c53a1934d8d5d9121f20a6778049da492d10f9d1",
+    "/angular-z-base.rxjs.a4b546606898aae85e65.js": "42a8dd91664b9201d30b94d683bbbabf5cfd697d",
+    "/angular-z-base.tslib.c88392cad8b44db3ebf2.js": "4b22709def6ea396539314e206f3697da2eef58c",
+    "/angular-z-base.webpack.cb63d876de4fb61bdc3d.js": "dcf11295ff16fe0f52c698b97318307ec1506f92",
+    "/angular-z-base.zone.js.a8c4ccea684e2900b525.js": "c7a3fcdfa560b3c0c44eeed509114b306b564124",
+    "/assets/css/main.css": "c8a83b123e7e31b63a2bc9eb5eeff2a58b4d88a2",
     "/assets/images/logo.png": "7ac8ee8698b2c63984bffc784205f3a1e0f15a7f",
     "/assets/images/logogit.png": "9186e42718a0c314d3b2fadf0b4ee20d59a7b095",
-    "/assets/styles/main.css": "99f33ed5c38975f48479809f45915f04b320a79c",
-    "/index.html": "427321b4a564a1c385b919800691a8a8d726092a",
-    "/main.c36850a8145f9055fe26.js": "0910b4c715960d22b80efd152f8fc350cd08dbec",
-    "/polyfills.28e2bd9171f9dbbe4c30.js": "da1a7d8ecc62dc9b98e27699864677ca56f9ea73",
-    "/runtime.f08c84963af9a5846d53.js": "d3624ef9426885fe0da6b829b57b713ca367c7bb",
-    "/styles.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/index.html": "c8eb243f5bae263939d781e65773a77102aa6c36",
+    "/main.92fe17e3507dd13016b8.js": "fb2902659841d99ab4231884a8b497cbe87112a0",
+    "/polyfills.3778740b8ab7c22b0efb.js": "59603c447969c4d228c4346e14c17c4196be0856",
+    "/runtime.41b60679bf456e67acb0.js": "844bb485a46c34fd2f30a389d5683d7a7ba21914"
   },
   "navigationUrls": [
     {

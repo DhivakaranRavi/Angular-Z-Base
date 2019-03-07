@@ -1,6 +1,16 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "esnext"]
-  }
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "src/main.ts"],
+  "files": ["src/main.ts", "src/polyfills.ts"]
 }

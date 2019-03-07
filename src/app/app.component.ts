@@ -6,6 +6,7 @@ import {
   transition,
   style,
 } from '@angular/animations';
+import { environment } from '../environment';
 @Component({
   selector: 'main',
   templateUrl: './app.component.html',
@@ -24,7 +25,15 @@ import {
       ]),
     ]),
   ],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  private headHTML: any;
+  constructor() {
+    environment.production
+      ? ((this.headHTML = document.getElementsByTagName('head')[0].innerHTML),
+        (this.headHTML += '<link rel="manifest" href="manifest.json" />'),
+        (document.getElementsByTagName('head')[0].innerHTML = this.headHTML))
+      : null;
+  }
 }

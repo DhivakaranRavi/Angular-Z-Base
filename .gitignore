@@ -1,8 +1,2 @@
 /node_modules
 npm-debug.log
-/config
-/coverage
-/src/
-prettierrc
-prettierignore
-tsconfig.json

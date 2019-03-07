@@ -1,22 +1,23 @@
 const { resolve } = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rxPaths = require('rxjs/_esm5/path-mapping');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const { AngularCompilerPlugin } = require('@ngtools/webpack');
-const {
-  IndexHtmlWebpackPlugin,
-} = require('@angular-devkit/build-angular/src/angular-cli-files/plugins/index-html-webpack-plugin');
 
 module.exports = {
   entry: {
     main: './src/main.ts',
     polyfills: './src/polyfills.ts',
-    styles: './src/styles.css',
   },
   output: {
     path: resolve('./dist'),
     filename: '[name].[contenthash].js',
+  },
+  performance: {
+    hints: false,
   },
   stats: {
     modules: false,
@@ -25,10 +26,6 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
     alias: rxPaths(),
-  },
-  node: false,
-  performance: {
-    hints: false,
   },
   module: {
     rules: [
@@ -49,7 +46,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['to-string-loader', 'css-loader'],
-        exclude: [resolve('./src/styles.css')],
+        include: resolve('src', 'assets'),
+      },
+      {
+        test: /\.(scss|sass)$/,
+        use: [
+          'to-string-loader',
+          { loader: 'css-loader', options: { sourceMap: true } },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+        include: [resolve('src', 'app')],
       },
       {
         test: /\.(eot|svg|cur)$/,
@@ -74,10 +85,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new IndexHtmlWebpackPlugin({
-      input: resolve('./src/index.html'),
-      output: 'index.html',
-      entrypoints: ['styles', 'polyfills', 'main'],
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: resolve('src/index.html'),
     }),
     new AngularCompilerPlugin({
       mainPath: resolve('./src/main.ts'),
@@ -85,6 +95,7 @@ module.exports = {
       nameLazyFiles: false,
       tsConfigPath: resolve('./tsconfig.json'),
       skipCodeGeneration: false,
+      skipMetadataEmit: true,
     }),
     new ProgressPlugin(),
     new CircularDependencyPlugin({

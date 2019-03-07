@@ -1,16 +1,20 @@
+'use strict';
+
 const common = require('./webpack.common');
 const merge = require('webpack-merge');
-const { resolve } = require('path');
+
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'eval',
   devServer: {
+    historyApiFallback: true,
     stats: {
       modules: false,
       warnings: false,
     },
   },
   optimization: {
+    noEmitOnErrors: true,
     runtimeChunk: 'single',
     splitChunks: {
       maxAsyncRequests: Infinity,
