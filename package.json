@@ -20,7 +20,7 @@
     "url": "https://github.com/DhivakaranRavi/Angular-Z-Base.git"
   },
   "author": "Dhivakaran",
-  "license": "ISC",
+  "license": "MIT",
   "jest": {
     "preset": "jest-preset-angular",
     "roots": [
